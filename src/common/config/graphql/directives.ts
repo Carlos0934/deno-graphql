@@ -4,7 +4,7 @@ import { GraphQLContext } from './context.ts'
 import { GraphQLSchemaWithContext } from 'yoga'
 
 export function authDirective(directiveName: string) {
-  const typeDirectiveArgumentMaps: Record<string, any> = {}
+  const typeDirectiveArgumentMaps: Record<string, unknown> = {}
 
   const authDirectiveTransformer = (
     schema: GraphQLSchemaWithContext<GraphQLContext>,
@@ -27,20 +27,20 @@ export function authDirective(directiveName: string) {
           getDirective(schema, fieldConfig, directiveName)?.[0] ??
             typeDirectiveArgumentMaps[typeName]
         if (authDirective) {
-          const { requires } = authDirective
+          const { requires } = authDirective as { requires: string }
           if (requires) {
             const { resolve = defaultFieldResolver } = fieldConfig
             fieldConfig.resolve = function (
-              source: any,
-              args: any,
-              context: any,
-              info: any,
+              source: unknown,
+              args: unknown,
+              context: GraphQLContext,
+              info: unknown,
             ) {
-              if (requires !== context.user.role) {
+              if (requires !== context.user?.role) {
                 throw new GraphQLError('Not authorized')
               }
 
-              return resolve(source, args, context, info as any)
+              return resolve(source, args, context, info)
             }
             return fieldConfig
           }

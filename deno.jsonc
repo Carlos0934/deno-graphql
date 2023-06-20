@@ -5,9 +5,19 @@
   },
   "importMap": "import_map.json",
   "fmt": {
+    "exclude": [
+      "node_modules",
+      "import_map.json",
+      "./src/common/types/graphql.ts"
+    ],
     "semiColons": false,
     "singleQuote": true,
     "useTabs": false,
     "proseWrap": "always"
+  },
+  "lint": {
+    "exclude": [
+      "./src/common/types/graphql.ts"
+    ]
   }
 }

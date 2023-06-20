@@ -1,0 +1,22 @@
+name: Lint and Format Deno
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Lint and Format Deno
+        uses: denolib/setup-deno@v2
+        with:
+          deno-version: v1.33.*
+
+      - run: deno cache --unstable src/main.ts
+
+      - run: deno fmt --check
+      - run: deno lint
