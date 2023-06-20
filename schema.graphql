@@ -1,0 +1,25 @@
+interface Node {
+  _id: ID!
+  createdAt: DateTime!
+}
+
+type PageInfo {
+  hasNextPage: Boolean!
+  startCursor: String
+  endCursor: String
+}
+
+enum Role {
+  ADMIN
+  USER
+  UNKNOWN
+}
+
+type Query {
+  hello: String!
+}
+
+scalar ObjectID
+scalar DateTime
+
+directive @auth(requires: Role!) on FIELD_DEFINITION

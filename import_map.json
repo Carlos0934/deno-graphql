@@ -1,0 +1,19 @@
+{
+  "imports": {
+    "graphql-utils": "https://esm.sh/@graphql-tools/utils@10.0.1",
+    "graphql-scalars": "https://esm.sh/graphql-scalars@1.22.2",
+    "yoga": "https://esm.sh/graphql-yoga@4.0.1",
+    "hono": "https://esm.sh/hono@3.2.5",
+    "graphql": "https://esm.sh/graphql@16.6.0",
+    "server": "https://deno.land/std@0.192.0/http/server.ts",
+    "path": "https://deno.land/std@0.192.0/path/mod.ts",
+    "dotnev": "https://deno.land/std@0.192.0/dotenv/mod.ts",
+    "bcrypt": "https://deno.land/x/bcrypt@v0.4.1/mod.ts",
+    "jwt": "https://deno.land/x/djwt@v2.9/mod.ts",
+    "mongo": "https://deno.land/x/mongo@v0.31.2/mod.ts",
+    "zod": "https://deno.land/x/zod@v3.21.4/mod.ts",
+    "randomstring": "https://esm.sh/randomstring@1.2.3",
+    "deep-merge": "https://esm.sh/ts-deepmerge@6.0.2"
+  },
+  "scopes": {}
+}

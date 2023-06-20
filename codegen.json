@@ -1,0 +1,20 @@
+{
+  "schema": "./schema.graphql",
+  "emitLegacyCommonJSImports": false,
+  "generates": {
+    "src/common/types/graphql.ts": {
+      "plugins": {
+        "typescript": {},
+        "typescript-resolvers": {}
+      },
+      "config": {
+        "scalars": {
+          "ObjectID": "string",
+          "DateTime": "string"
+        },
+        "contextType": "../config/graphql/context.ts#GraphQLContext"
+      }
+    }
+  },
+  "overwrite": true
+}

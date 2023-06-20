@@ -1,0 +1,13 @@
+{
+  "tasks": {
+    "dev": "deno run --allow-net --allow-read   --allow-env  --watch src/main.ts",
+    "generate": "npx graphql-codegen"
+  },
+  "importMap": "import_map.json",
+  "fmt": {
+    "semiColons": false,
+    "singleQuote": true,
+    "useTabs": false,
+    "proseWrap": "always"
+  }
+}
