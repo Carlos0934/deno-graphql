@@ -1,6 +1,6 @@
 ﻿# Deno GraphQL API with MongoDB
 
-## [Description]
+## Description
 
 This is a template to build a flexible and efficient API for manipulating data
 using Deno, GraphQL, and MongoDB. Ready to run on Deno deploy.
@@ -11,7 +11,7 @@ using Deno, GraphQL, and MongoDB. Ready to run on Deno deploy.
 - [MongoDB](https://www.mongodb.com/)
 - [Node.js](https://nodejs.org/en/)
 
-## Setup
+## Set up
 
 ### Clone the repo
 
